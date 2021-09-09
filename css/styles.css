@@ -27,6 +27,16 @@ p {
   flex: 1;
 }
 
+.flex-desktop-lg {
+  flex: 1;
+  flex-basis: 60%;
+}
+
+.flex-desktop-sm {
+  flex: 1;
+  flex-basis: 40%;
+}
+
 .flex {
   flex: 1;
   flex-basis: 50%;
@@ -40,6 +50,7 @@ p {
 }
 
 button {
+  cursor: pointer;
   font-family: Poppins;
   font-size: 16px;
 }
@@ -64,6 +75,10 @@ header.header .text p {
   line-height: 1.5;
 }
 
+header.header button {
+  margin-top: 1rem;
+}
+
 button.try-free {
   background-color: white;
   color: black;
@@ -76,6 +91,10 @@ button.try-free {
 button.try-free p {
   font-family: "Open Sans";
   font-weight: 700;
+}
+
+button.try-free:active {
+  box-shadow: none;
 }
 
 button {
@@ -204,6 +223,32 @@ footer.footer i {
 @media only screen and (min-width: 1052px) {
   .flex-container-desktop {
     flex-direction: row;
+  }
+  header.header {
+    text-align: left;
+    padding: 5% 10%;
+  }
+  header.header .flex-desktop:nth-of-type(1) {
+    padding-top: 5rem;
+    margin-right: 10%;
+  }
+  header.header h1 {
+    font-size: 2.7rem;
+  }
+  .community {
+    width: 80%;
+  }
+  .article {
+    text-align: left;
+  }
+  .article:nth-of-type(1) .flex-container-desktop, .article:nth-of-type(3) .flex-container-desktop {
+    flex-direction: row-reverse;
+  }
+  .article:nth-of-type(1) .flex-desktop-lg, .article:nth-of-type(3) .flex-desktop-lg {
+    padding-right: 10%;
+  }
+  .article:nth-of-type(2) .flex-desktop-lg {
+    padding-left: 10%;
   }
   footer.footer {
     padding: 0 7rem 7rem;

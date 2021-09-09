@@ -24,6 +24,14 @@ p {
 .flex-desktop {
   flex: 1;
 }
+.flex-desktop-lg {
+  flex: 1;
+  flex-basis: 60%;
+}
+.flex-desktop-sm {
+  flex: 1;
+  flex-basis: 40%;
+}
 
 .flex {
   flex: 1;
@@ -37,6 +45,7 @@ p {
   align-items: flex-start;
 }
 button {
+  cursor: pointer;
   font-family: Poppins;
   font-size: 16px;
 }
@@ -59,6 +68,9 @@ header.header {
       line-height: 1.5;
     }
   }
+  button {
+    margin-top: 1rem;
+  }
 }
 
 button.try-free {
@@ -71,6 +83,9 @@ button.try-free {
   p {
     font-family: "Open Sans";
     font-weight: 700;
+  }
+  &:active {
+    box-shadow: none;
   }
 }
 button {
@@ -184,6 +199,37 @@ footer.footer {
 @media only screen and (min-width: 1052px) {
   .flex-container-desktop {
     flex-direction: row;
+  }
+  header.header {
+    text-align: left;
+    padding: 5% 10%;
+    .flex-desktop:nth-of-type(1) {
+      padding-top: 5rem;
+      margin-right: 10%;
+    }
+    h1 {
+      font-size: 2.7rem;
+    }
+  }
+  .community {
+    width: 80%;
+  }
+  .article {
+    text-align: left;
+    &:nth-of-type(1),
+    &:nth-of-type(3) {
+      .flex-container-desktop {
+        flex-direction: row-reverse;
+      }
+      .flex-desktop-lg {
+        padding-right: 10%;
+      }
+    }
+    &:nth-of-type(2) {
+      .flex-desktop-lg {
+        padding-left: 10%;
+      }
+    }
   }
   footer.footer {
     padding: 0 7rem 7rem;
