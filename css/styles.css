@@ -172,6 +172,11 @@ footer.footer {
   padding: 1rem;
 }
 
+footer.footer #logo {
+  height: 30px;
+  margin-bottom: 2rem;
+}
+
 footer.footer p {
   color: white;
 }

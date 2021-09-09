@@ -153,6 +153,10 @@ footer.footer {
   position: relative;
   background-color: hsl(192, 100%, 9%);
   padding: 1rem;
+  #logo {
+    height: 30px;
+    margin-bottom: 2rem;
+  }
   p {
     color: white;
   }
