@@ -37,16 +37,16 @@ p {
   flex-basis: 40%;
 }
 
-.flex {
+.flex-left {
+  display: flex;
   flex: 1;
-  flex-basis: 50%;
 }
 
 .flex-right {
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 button {
@@ -55,9 +55,13 @@ button {
   font-size: 16px;
 }
 
+button.pink:hover {
+  background: #ff99da;
+}
+
 header.header {
   padding: 2rem 2rem;
-  background: url("../images/bg-hero-mobile.svg") no-repeat;
+  background: #ebfbff url("../images/bg-hero-mobile.svg") no-repeat;
   background-size: cover;
   text-align: center;
 }
@@ -77,6 +81,10 @@ header.header .text p {
 
 header.header button {
   margin-top: 1rem;
+}
+
+header.header button.try-free {
+  margin-top: 0;
 }
 
 button.try-free {
@@ -116,7 +124,7 @@ img.mockup {
 }
 
 .middle-section {
-  margin: 3rem auto 6rem;
+  margin: 3rem auto 17rem;
   width: 90%;
   text-align: center;
 }
@@ -174,6 +182,11 @@ footer.footer ul {
 
 footer.footer li {
   margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+footer.footer li:hover p {
+  text-decoration: underline;
 }
 
 footer.footer .flex-wrapper li {
@@ -212,12 +225,25 @@ footer.footer .icon {
   margin: 0 5px;
 }
 
+footer.footer .icon:hover {
+  border: 1px solid #ff52bf;
+}
+
+footer.footer .icon:hover i {
+  color: #ff52bf;
+}
+
 footer.footer i {
   position: relative;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 1052px) {
@@ -227,6 +253,8 @@ footer.footer i {
   header.header {
     text-align: left;
     padding: 5% 10%;
+    background: #ebfbff url("../images/bg-hero-desktop.svg") no-repeat;
+    background-size: cover;
   }
   header.header .flex-desktop:nth-of-type(1) {
     padding-top: 5rem;
@@ -236,7 +264,7 @@ footer.footer i {
     font-size: 2.7rem;
   }
   .community {
-    width: 80%;
+    width: 70%;
   }
   .article {
     text-align: left;
@@ -259,5 +287,8 @@ footer.footer i {
   }
   .grid-item:nth-of-type(1) li:nth-of-type(1) {
     margin-right: 6rem;
+  }
+  .copyright {
+    text-align: right;
   }
 }

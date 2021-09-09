@@ -33,27 +33,32 @@ p {
   flex-basis: 40%;
 }
 
-.flex {
+.flex-left {
+  display: flex;
+
   flex: 1;
-  flex-basis: 50%;
 }
 
 .flex-right {
   display: flex;
   flex: 1;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 button {
   cursor: pointer;
   font-family: Poppins;
   font-size: 16px;
+  &.pink:hover {
+    background: hsl(322, 100%, 80%);
+  }
 }
+
 // End of reusable
 
 header.header {
   padding: 2rem 2rem;
-  background: url("../images/bg-hero-mobile.svg") no-repeat;
+  background: hsl(193, 100%, 96%) url("../images/bg-hero-mobile.svg") no-repeat;
   background-size: cover;
   text-align: center;
   .navbar {
@@ -70,6 +75,9 @@ header.header {
   }
   button {
     margin-top: 1rem;
+  }
+  button.try-free {
+    margin-top: 0;
   }
 }
 
@@ -105,7 +113,7 @@ img.mockup {
 }
 
 .middle-section {
-  margin: 3rem auto 6rem;
+  margin: 3rem auto 17rem;
   width: 90%;
   text-align: center;
   img {
@@ -153,6 +161,10 @@ footer.footer {
   }
   li {
     margin-bottom: 1.5rem;
+    cursor: pointer;
+    &:hover p {
+      text-decoration: underline;
+    }
   }
   .flex-wrapper {
     li {
@@ -186,6 +198,12 @@ footer.footer {
     height: 35px;
     cursor: pointer;
     margin: 0 5px;
+    &:hover {
+      border: 1px solid hsl(322, 100%, 66%);
+      & i {
+        color: hsl(322, 100%, 66%);
+      }
+    }
   }
   i {
     position: relative;
@@ -195,6 +213,10 @@ footer.footer {
     color: white;
   }
 }
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+}
 
 @media only screen and (min-width: 1052px) {
   .flex-container-desktop {
@@ -203,6 +225,9 @@ footer.footer {
   header.header {
     text-align: left;
     padding: 5% 10%;
+    background: hsl(193, 100%, 96%) url("../images/bg-hero-desktop.svg")
+      no-repeat;
+    background-size: cover;
     .flex-desktop:nth-of-type(1) {
       padding-top: 5rem;
       margin-right: 10%;
@@ -212,7 +237,7 @@ footer.footer {
     }
   }
   .community {
-    width: 80%;
+    width: 70%;
   }
   .article {
     text-align: left;
@@ -242,5 +267,8 @@ footer.footer {
     li:nth-of-type(1) {
       margin-right: 6rem;
     }
+  }
+  .copyright {
+    text-align: right;
   }
 }
